@@ -1,0 +1,23 @@
+#spring:
+  #datasource:
+    #driver-class-name: org.h2.Driver
+    #schema: classpath:db/schema-h2.sql
+    #data: classpath:db/data-h2.sql
+    #url: jdbc:h2:mem:test
+    #username: root
+    #password: test
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    schema: classpath:db/schema-h2.sql
+    data: classpath:db/data-h2.sql
+    url: jdbc:mysql://127.0.0.1:3306/cityHikingdb
+    username: root
+    password: root
+    #always为始终执行初始化，embedded只初始化内存数据库（默认值）,如h2等，never为不执行初始化
+    initialization-mode: always
+
+logging:
+  level:
+    com.baomidou.mybatisplus.samples.quickstart: debug
